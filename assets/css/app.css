@@ -47,8 +47,6 @@ body{
     width: 1024px;
     padding: 1em;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
     gap: 1rem;
 }
 
@@ -149,6 +147,7 @@ body{
 
 .media{
     background: var(--purpul-100);
+    font-size: 12px;
     background-image: url('/assets/images/illustration-schedule-posts.webp');
     background-repeat: no-repeat;
     background-size: 270px;
@@ -163,10 +162,6 @@ body{
 
 .small{
     font-size: 14px;
-}
-
-.media{
-    font-size: 12px;
 }
 
 .media .card-title{
@@ -286,6 +281,101 @@ body{
     font-size: 1.2rem;
     padding-right: 20%;
 }
+
+@media screen and (max-width : 1060px){
+   .container{
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+   }
+
+   .post,
+   .write{
+    align-items: flex-start;
+   }
+
+   .zone-4 .followers{
+    flex: 2;
+   }
+}
+
+@media screen and (max-width : 784px){
+    .zone-3{
+        display: block;
+    }
+
+    .media{
+        background-image: url('');
+        text-align: center;
+    }
+
+    .small{
+        font-size: var(--font-size);
+    }
+
+    .media img{
+        display: block;
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .zone-6{
+        margin: 1rem 0 0 0;
+    }
+
+    .consistent{
+        background-position-y: 100px;
+    }
+ }
+
+ @media screen and (max-width : 668px){
+    .zone-8{
+        flex-direction: column;
+    }
+
+    .accounts{
+        background-image: url('');
+    }
+
+    .accounts img{
+        display: block;
+        width: 300px;
+    }
+
+    .accounts h1{
+        margin-top: 10px;
+    }
+
+    .consistent{
+        background-image: url('');
+        align-items: flex-start;
+        padding-bottom: 0;
+    }
+
+    .consistent img{
+        display: block;
+        width: 200px;
+    }
+ }
+
+ @media screen and (max-width : 628px){
+    .zone-4{
+        flex-direction: column-reverse;
+    }
+
+    .followers{
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .followers img {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .audience {
+        padding: 30px;
+    }
+ }
 
 
 
